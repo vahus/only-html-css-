@@ -1,0 +1,224 @@
+/*general*/
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+ html, body {
+     height: 100%;
+     font: normal 16px sans-serif;
+     color: #000;
+     min-width: 100%;
+     background-color: gainsboro;
+}
+ nav {
+     list-style: none;
+}
+ a {
+     text-decoration: none;
+     opacity: 0.75;
+     color: #7f8c8d;
+}
+ a:hover {
+     opacity: 1;
+}
+ a.btn {
+     border-radius: 4px;
+     text-transform: uppercase;
+     font-weight: bold;
+     background-color: rgba(63,81,181,0.8);
+     opacity: 1;
+}
+ section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 50px 60px;
+}
+/*header*/
+ .navigation {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding: 25px 100px 0;
+     animation: 1s fadein 0.5s forwards;
+     opacity: 0;
+     z-index: 1;
+     color: #7f8c8d;
+     top: 0px;
+     position: fixed;
+     z-index: 4;
+     font-family: 'Anton', sans-serif;
+}
+ nav ul {
+     list-style: none;
+}
+ nav li {
+     display: inline-block;
+     margin: 0 15px;
+}
+/*hero*/
+ .hero {
+     height: 100%;
+     color: #FFF;
+     z-index: 0;
+}
+ .background-image {
+     position: fixed;
+     min-width: 100%;
+     max-height: 100vh;
+     top: 0;
+     left: 0;
+}
+ .hero header {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ span {
+     color: red;
+}
+ .hero-welcome h1 {
+     font-size: 3.6rem;
+     margin-bottom: 15px;
+     animation: 5s borderFont 1s forwards;
+}
+ .hero-welcome h3 {
+     font: normal 1.1rem;
+     margin-bottom: 40px;
+}
+ .hero-welcome a.btn {
+     padding: 20px 46px;
+     color: white;
+}
+ .hero-welcome a.btn:hover {
+     background-color: rgba(63,81,181,0.9);
+}
+ .hero-welcome {
+     opacity: 0;
+     margin-top: 100px;
+     animation: 1s slidefade .555s forwards;
+}
+/*MAin Container*/
+ .container {
+     position: relative;
+     background-color: #FFF;
+     z-index: 3;
+}
+ .container h2 {
+     margin-bottom: 50px;
+}
+ .wrapper {
+     display: grid;
+     grid-template-columns: 200px 200px 200px;
+     grid-column-gap: 20px;
+     grid-row-gap: 20px;
+}
+ .city img {
+     width:100%;
+     height: 280px;
+     opacity: 0.6;
+}
+ .city img:hover {
+     opacity: 1;
+}
+/* o nas */
+ section#about {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-auto-rows: 400px;
+}
+ section#about .container {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+}
+ section#about img {
+     max-width: 100%;
+}
+/* FOOTER */
+ footer .container {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-auto-rows: 400px;
+     background-color: transparent;
+     color: #fff;
+}
+ .contact-text {
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+}
+ iframe {
+     border:0;
+     width: 100%;
+     height: 100%;
+}
+ footer .footer-icon {
+     position: absolute;
+     width: 100%;
+     height: auto;
+     background-color: black;
+     padding: 10px;
+}
+ .icon {
+     color: azure;
+     font-size: 2rem;
+     padding: 10px;
+}
+ .copyr {
+     color: azure;
+     padding-top: 10px;
+     float: right;
+}
+/* icon scroll */
+ .icon-scroll, .icon-scroll:before{
+     position: absolute;
+     left: 50%;
+     bottom: 3%;
+     z-index: 5;
+}
+ .icon-scroll{
+     width: 20px;
+     height: 35px;
+     margin-left: -10px;
+     margin-top: -17px;
+     box-shadow: inset 0 0 0 1px rgb(255, 255, 255);
+     border-radius: 12px;
+}
+ .icon-scroll:before{
+     content: '';
+     width: 4px;
+     height: 4px;
+     background: rgb(255, 255, 255);
+     margin-left: -2px;
+     top: 4px;
+     border-radius: 2px;
+     animation-duration: 1.5s;
+     animation-iteration-count: infinite;
+     animation-name: scroll;
+}
+ @keyframes scroll{
+     0%{
+         opacity: 1;
+    }
+     100%{
+         opacity: 0;
+         transform: translateY(23px);
+    }
+}
+ @keyframes slidefade {
+     100%{
+         opacity: 1;
+         margin-top: 0px;
+    }
+}
+ @keyframes fadein {
+     100% {
+         opacity: 1;
+    }
+}
+ 
